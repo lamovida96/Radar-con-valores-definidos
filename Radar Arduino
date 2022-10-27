@@ -1,8 +1,3 @@
-/*
-Codigo originalmente creado por Dejan Nedelkovski de howtomechatronics.com
-Traducido y modificado por El Taller de TD de youtube/eltallerdetd
-*/
-
 // Importa la libreria Servo
 #include <Servo.h>. 
 
@@ -28,13 +23,13 @@ void loop() {
   myServo.write(i);
   delay(30);
   distance = calculateDistance();//  Llama a esta funcion para calcular la distancia por cada grado
-  Serial.print("Grados Servo: ");
+  Serial.print("Grados Servo: ");// imprime en pantalla las palabras introducidas entre comillas
   Serial.print(i); // Envia el grado de inclinacion actual al puerto serial
   Serial.print(","); // Envia una , como caracter de separacion
-  Serial.print("Distancia: ");
+  Serial.print("Distancia: ");// imprime en pantalla las palabras introducidas entre comillas
   Serial.print(distance); // Envia la distancia al puerto serial
   Serial.print("."); // Envia un . como final de la orden
-  Serial.print("\n");
+  Serial.print("\n");//realiza un salto de linea
 
    if(distance<20){ // Si la distancia es menor a 20cm el ruido sera mas agudo que si la distancia esta entre mayor a 20 y menor a 40
     tone(8, 500, 100);
@@ -50,13 +45,13 @@ void loop() {
   myServo.write(i);
   delay(30);
   distance = calculateDistance();
-  Serial.print("Grados Servo: ");
+  Serial.print("Grados Servo: ");// imprime en pantalla las palabras introducidas entre comillas
   Serial.print(i);
   Serial.print(",");
-  Serial.print("Distancia: ");
+  Serial.print("Distancia: ");// imprime en pantalla las palabras introducidas entre comillas
   Serial.print(distance);
   Serial.print(".");
-  Serial.print("\n");
+  Serial.print("\n");//realiza un salto de linea
    
    if(distance<20){ // Si la distancia es menor a 20cm el ruido sera mas agudo que si la distancia esta entre mayor a 20 y menor a 40
     tone(8, 500, 100);
